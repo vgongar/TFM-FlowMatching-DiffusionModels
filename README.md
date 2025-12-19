@@ -1,10 +1,11 @@
-# 🇪🇸 Visualizando _Flow Matching_
-
-- __Autor__: Víctor González García
-
 ![animation](https://github.com/user-attachments/assets/f7bf6da9-1ee9-42fc-9ff0-e244854a4b5a)
 
 <img width="1346" height="763" alt="program" src="https://github.com/user-attachments/assets/7e2be1d2-1124-4ec0-b8bf-5b8bf3e5f795" />
+
+
+# 🇪🇸 Visualizando _Flow Matching_
+
+- __Autor__: Víctor González García
 
 Esta es una pequeña aplicación que nos permite visualizar cómo se generar datos a través de _Flow Matching_. La aplicación nos permite escoger entre dos distribuciones "de juguete" y otra opción en la que podemos dibujar nuestro dataset con el ratón. Una vez escogidos los datos podremos ver una gráfica de la función de pérdida en cada época de entrenamiento y una animación de como se transforma el ruido inicial gaussiano en la distribución. Con la opción de dibujar uno puede darse cuenta de la flexibilidad de estos métodos para aprender distribuciones arbitrarias. 
 
@@ -64,10 +65,8 @@ En resumen lo que debemos hacer es:
 
 Una vez entrenado el modelo debemos integrar la ecuación con algún método (_Euler_, _RK4_, etc.) y obtendremos en $t=1$ el dato generado.
 
-# 🇬🇧 Visualizing Flow Matching
+# 🇬🇧 Visualizing Flow Matching
 - __Author__: Víctor González García
-
-<img width="1346" height="763" alt="program" src="https://github.com/user-attachments/assets/7e2be1d2-1124-4ec0-b8bf-5b8bf3e5f795" />
 
 This is a small application that allows us to visualize how data is generated through Flow Matching. The application allows us to choose between two "toy" distributions and another option where we can draw our dataset with the mouse. Once the data is chosen, we can see a graph of the loss function at each training epoch and an animation of how the initial Gaussian noise transforms into the distribution. With the drawing option, one can realize the capability of these methods to learn arbitrary distributions.
 
