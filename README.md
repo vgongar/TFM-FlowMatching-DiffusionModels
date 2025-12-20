@@ -50,7 +50,7 @@ Conveniently, the expression for the conditional loss function in the case where
 
 $\mathcal{L}(\theta)=\mathbb{E}[\Vert u_t^\theta(tz+(1-t)\varepsilon)-(z-\varepsilon)\Vert^2]$, where $t\rightsquigarrow U[0,1],\quad z\rightsquigarrow p_{data}, \quad \varepsilon \rightsquigarrow \mathcal{N}(0,I)$
 
-In summary, what we must do is:
+In summary, what we must can be broken down into this steps:
 
 1. Sample z randomly from the dataset.
 2. Sample a random number $t \rightsquigarrow U[0,1]$.
@@ -111,7 +111,7 @@ Una buena noticia es que la expresión de la función de pérdida condicional en
 
 $\mathcal{L}(\theta)=\mathbb{E}[\Vert u_t^\theta(tz+(1-t)\varepsilon)-(z-\varepsilon)\Vert^2]$, donde $t\rightsquigarrow U[0,1],\quad z\rightsquigarrow p_{data}, \quad \varepsilon \rightsquigarrow \mathcal{N}(0,I)$
 
-En resumen lo que debemos hacer es:
+En resumen, lo que debemos hacer es lo siguiente:
 
 1. Tomar al azar $z$ del _dataset_.
 2. Generar un número aleatorio $t \rightsquigarrow U[0,1]$.
@@ -121,6 +121,3 @@ En resumen lo que debemos hacer es:
 6. Actualizar los parámetros $\theta$ vía descenso de gradiente aplicado a $\mathcal{L}(\theta)$.
 
 Una vez entrenado el modelo debemos integrar la ecuación con algún método (_Euler_, _RK4_, etc.) y obtendremos en $t=1$ el dato generado.
-
-
-Once the model is trained, we must integrate the equation using some method (_Euler_, _RK4_, etc.) and we will obtain the generated datum at $t=1$.
