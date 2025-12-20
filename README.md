@@ -44,7 +44,7 @@ Again, because we do not know the exact value of $u_t(x)$, we resort to another 
 
 > $\mathbb{E}[\Vert u_t^\theta(x)-u_t(x|z)\Vert^2]$, where $t \rightsquigarrow U[0,1],\quad z \rightsquigarrow p_{data},\quad x\rightsquigarrow p_t(·|z)$
 
-This function is computable (even though we haven't explained what $u_t(x|z)$, and furthermore, it is proven that the parameters $\theta$ that minimize the conditional loss function also minimize the original loss function we were interested in. This is known as __Conditional Flow Matching__.
+This function is computable (even though we haven't explained what $u_t(x|z)$ is), and furthermore, it is proven that the parameters $\theta$ that minimize the conditional loss function also minimize the original loss function we were interested in. This is known as __Conditional Flow Matching__.
 
 Conveniently, the expression for the conditional loss function in the case where $p_{init}=\mathcal{N}(0,I)$(a normal distribution with mean $0$ and covariance matrix $I$, the identity) is very simple:
 
