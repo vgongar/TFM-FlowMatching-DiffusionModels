@@ -15,9 +15,13 @@ A Jupyter Notebook is also included to guide us through the process in case we w
 
 ## Installation
 __Web__:
-You can check the app in your browser clicking [here](https://visualizingflowmatching.streamlit.app). __Disclaimer__: Streamlit servers have only about 1GB of RAM. I recommend you train on simpler shapes - if you draw them -, less epochs ($\approx$500) and lowest learning rate. You will, most likely, get an excellent result anyway. Otherwise the training could last several minutes.
+
+You can check the app in your browser clicking [here](https://visualizingflowmatching.streamlit.app). __Disclaimer__: Streamlit servers have only about 1GB of RAM. I recommend you train on simpler shapes - if you draw them -, less epochs ($\sim$ 500) and lowest learning rate. You will, most likely, get an excellent result anyway. Otherwise the training could last several minutes.
+
 __Local__:
+
 This will be the most efficient way. Nevertheless it is more complex (not difficult though) if you don't have experience with the terminal. These commands should work on Linux/MacOS.
+
 1. Download the repository.
 2. Create a virtual environment in the root folder of the repository with the command `python3 -m venv .venv`. Make sure you are in the main project folder (where `app.py` is located).
 3. Activate the environment `source .venv/bin/activate`.
@@ -78,9 +82,13 @@ Esta es una pequeña aplicación que nos permite visualizar cómo se generar dat
 También se incluye una Jupyter Notebook que nos guía en el proceso por si quisiéramos replicar el comportamiento. La arquitectura de la red consiste de una capa de entrada con 3 neuronas (x,y,t), dos capas ocultas de 128 neuronas cada una y una última de salida con dos neuronas (vx,vy). Todas las capas menos la de salida usan la función de activación SiLU (Sigmoid Linear Unit).
 
 ## Instalación.
+
 __Web__:
-Puedes probar la aplicación [aquí](https://visualizingflowmatching.streamlit.app). __Advertencia__: Los servidores de Streamlit tienen 1GB de RAM aproximadamente. Es recomendable que utilices formas más sencillas -si optas por dibujar el dataset-, menos épocas ($\approx$500) y el mayor _learning rate_. Igualmente obtendrás un resultado excelente. De otra forma el entrenamiento podría durar varios minutos.
+
+Puedes probar la aplicación [aquí](https://visualizingflowmatching.streamlit.app). __Advertencia__: Los servidores de Streamlit tienen 1GB de RAM aproximadamente. Es recomendable que utilices formas más sencillas -si optas por dibujar el dataset-, menos épocas ($\sim$ 500) y el mayor _learning rate_. Igualmente obtendrás un resultado excelente. De otra forma el entrenamiento podría durar varios minutos.
+
 __Local__:
+
 Esta es la forma más eficiente. Sin embargo, es más compleja (que no difícil) si no tienes experiencia con la terminal. Estos comandos debería valer en Linux/MacOS. 
 1. Descarga el repositorio.
 2. Crea un entorno virtual en el repositorio con el comando `python3 -m venv .venv`. Asegúrate de estar en la carpeta principal del proyecto (donde está `app.py`).
@@ -103,7 +111,6 @@ La principal limitación es que no conocemos de qué distribución provienen los
 > $\frac{dX_t}{dt}=u_t(X_t)$
 >
 > donde $\displaystyle \int u_t(x|z)\frac{p_t(x|z)p_{data}(z)}{p_t(x)} dz$, verifica que $X_1\rightsquigarrow p_{data}$. Entonces al final de la simulación ($t=1$) obtenemos una nube de puntos con la misma distribución de los datos.
-
 
 Los términos que aparecen en la integral son técnicos y no los explicaré aquí, pero observamos que para poder evaluar el campo necesitamos conocer la distribución $p_{data}$ (!!!). Ese era nuestro objetivo desde el principio. Es por eso que no podemos usar esta fórmula tal cual esta así (incluso si la conociéramos, esa integral es intratable).
 
