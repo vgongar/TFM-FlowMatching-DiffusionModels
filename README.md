@@ -1,6 +1,10 @@
 ![animation](https://github.com/user-attachments/assets/f7bf6da9-1ee9-42fc-9ff0-e244854a4b5a)
 
-<img width="1346" height="763" alt="program" src="https://github.com/user-attachments/assets/7e2be1d2-1124-4ec0-b8bf-5b8bf3e5f795" />
+
+
+https://github.com/user-attachments/assets/3d7143a3-e199-4ec7-b035-3df0a61289df
+
+
 
 # 🇬🇧 Visualizing Flow Matching
 - __Author__: Víctor González García
@@ -10,8 +14,12 @@ This is a small application that allows us to visualize how data is generated th
 A Jupyter Notebook is also included to guide us through the process in case we want to replicate the behavior. The network architecture consists of an input layer with 3 neurons (x, y, t), two hidden layers of 128 neurons each, and a final output layer with two neurons (vx, vy). All layers except the output layer use the SiLU (Sigmoid Linear Unit) activation function.
 
 ## Installation
+__Web__:
+You can check the app in your browser clicking [here](https://visualizingflowmatching.streamlit.app). __Disclaimer__: Streamlit servers have only about 1GB of RAM. I recommend you train on simpler shapes - if you draw them -, less epochs ($\approx$500) and lowest learning rate. You will, most likely, get an excellent result anyway. Otherwise the training could last several minutes.
+__Local__:
+This will be the most efficient way. Nevertheless it is more complex (not difficult though) if you don't have experience with the terminal. These commands should work on Linux/MacOS.
 1. Download the repository.
-2. Create a virtual environment in the repository with the command `python3 -m venv .venv`. Make sure you are in the main project folder (where `app.py` is located).
+2. Create a virtual environment in the root folder of the repository with the command `python3 -m venv .venv`. Make sure you are in the main project folder (where `app.py` is located).
 3. Activate the environment `source .venv/bin/activate`.
 4. Install the libraries: `pip install -r requirements.txt`.
 5. Run the app with streamlit run `app.py`.
@@ -70,6 +78,10 @@ Esta es una pequeña aplicación que nos permite visualizar cómo se generar dat
 También se incluye una Jupyter Notebook que nos guía en el proceso por si quisiéramos replicar el comportamiento. La arquitectura de la red consiste de una capa de entrada con 3 neuronas (x,y,t), dos capas ocultas de 128 neuronas cada una y una última de salida con dos neuronas (vx,vy). Todas las capas menos la de salida usan la función de activación SiLU (Sigmoid Linear Unit).
 
 ## Instalación.
+__Web__:
+Puedes probar la aplicación [aquí](https://visualizingflowmatching.streamlit.app). __Advertencia__: Los servidores de Streamlit tienen 1GB de RAM aproximadamente. Es recomendable que utilices formas más sencillas -si optas por dibujar el dataset-, menos épocas ($\approx$500) y el mayor _learning rate_. Igualmente obtendrás un resultado excelente. De otra forma el entrenamiento podría durar varios minutos.
+__Local__:
+Esta es la forma más eficiente. Sin embargo, es más compleja (que no difícil) si no tienes experiencia con la terminal. Estos comandos debería valer en Linux/MacOS. 
 1. Descarga el repositorio.
 2. Crea un entorno virtual en el repositorio con el comando `python3 -m venv .venv`. Asegúrate de estar en la carpeta principal del proyecto (donde está `app.py`).
 3. Activa el entorno `source .venv/bin/activate`.
